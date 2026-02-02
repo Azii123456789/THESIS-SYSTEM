@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparency Board - SK Transparency Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="home.html" class="logo">
+                <ion-icon name="shield-checkmark"></ion-icon>
+                SK <span>TRANSPARENCY</span>
+            </a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="officials.html">Officials</a></li>
+                    <li><a href="board.html" class="active">Board</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="login.html" class="nav-login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container animate-on-scroll" style="min-height: 80vh;">
+        <div class="section-title">
+            <h2>Transparency Board</h2>
+            <p>Mandatory posting of budget, procurement, and financial reports.</p>
+        </div>
+
+        <!-- Admin Controls (Hidden by default) -->
+        <div id="admin-controls"
+            style="display: none; margin-bottom: 2rem; background: white; padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow-sm);">
+            <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Upload New Document</h3>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <input type="text" id="new-doc-name" placeholder="Document Name"
+                    style="flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 6px;">
+                <input type="text" id="new-doc-date" placeholder="Date (e.g. Jan 2025)"
+                    style="flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 6px;">
+                <button onclick="uploadDocument()" class="btn"
+                    style="padding: 0.5rem 1.5rem; cursor: pointer;">Upload</button>
+            </div>
+        </div>
+
+        <div class="doc-grid" id="doc-grid">
+            <!-- Budget -->
+            <div class="doc-card">
+                <div class="doc-info">
+                    <h4>Annual Budget 2025</h4>
+                    <span>Uploaded: Jan 15, 2025</span>
+                </div>
+                <a href="#" class="doc-action">Download PDF</a>
+            </div>
+
+            <!-- Financial Statement -->
+            <div class="doc-card">
+                <div class="doc-info">
+                    <h4>Q1 Financial Report</h4>
+                    <span>Uploaded: April 5, 2025</span>
+                </div>
+                <a href="#" class="doc-action">Download PDF</a>
+            </div>
+
+            <!-- Procurement -->
+            <div class="doc-card">
+                <div class="doc-info">
+                    <h4>Annual Procurement Plan</h4>
+                    <span>Uploaded: Jan 20, 2025</span>
+                </div>
+                <a href="#" class="doc-action">Download PDF</a>
+            </div>
+
+            <!-- Resolutions -->
+            <div class="doc-card">
+                <div class="doc-info">
+                    <h4>Internal Rules of Procedure</h4>
+                    <span>Uploaded: Jan 10, 2025</span>
+                </div>
+                <a href="#" class="doc-action">Download PDF</a>
+            </div>
+
+            <!-- Inventory -->
+            <div class="doc-card">
+                <div class="doc-info">
+                    <h4>Inventory of Property</h4>
+                    <span>Uploaded: Dec 30, 2024</span>
+                </div>
+                <a href="#" class="doc-action">Download PDF</a>
+            </div>
+
+            <div class="doc-card">
+                <div class="doc-info">
+                    <h4>Project Accomplishment Report</h4>
+                    <span>Uploaded: June 15, 2025</span>
+                </div>
+                <a href="#" class="doc-action">Download PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sangguniang Kabataan Transparency Portal. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
